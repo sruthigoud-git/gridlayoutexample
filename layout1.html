@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin:0;
+            border:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+            overflow: scroll;
+            background-color: rgb(89, 95, 95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxes{
+            border: 5px solid black;
+            background-color:rgba(134, 134, 134, 0.903);
+            display: grid;
+             grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px; /*50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px; */
+            grid-template-rows: 100px 100px 100px 100px;
+        }
+       .box{
+           background-color:transparent;
+           margin:10px;
+           color:transparent;
+        }
+        .box1{
+            border: 3px solid yellow;
+        }
+        .box2{
+            border: 3px solid yellow;
+        }
+        .box7{
+            border: 3px solid blue;
+        }
+        .box8{
+            border: 3px solid green;
+        }
+        .box9{
+            border: 3px solid green;
+        }
+        .box10{
+            border: 3px solid orange;
+        }
+        .box11{
+            border: 3px solid orange;
+        }
+        .box12{
+            border: 3px solid yellow;
+        }
+        .box13{
+            border: 3px solid yellow;
+        }
+        .box14{
+            border: 3px solid green;
+        }
+        .box15{
+            border: 3px solid green;
+        }
+        .box16{
+            border: 3px solid blue;
+        }
+        .box17{
+            border: 3px solid blue;
+        }
+        .box18{
+            border: 3px solid blue;
+        }
+        .box19{
+            border: 3px solid orange;
+        }
+        .box20{
+            border: 3px solid orange;
+        }
+        .box21{
+            border: 3px solid orange;
+        }
+        .box22{
+            border: 3px solid blue;
+        }
+        .box23{
+            border: 3px solid blue;
+        }
+        .box24{
+            border: 3px solid green;
+        }
+        .box25{
+            border: 3px solid green;
+        }
+        .box26{
+            border: 3px solid blue;
+        }
+        .box27{
+            border: 3px solid blue;
+        }
+        .box29{
+            border: 3px solid yellow;
+        }
+        .box30{
+            border: 3px solid orange;
+        }
+        .box31{
+            border: 3px solid orange;
+        }
+        .box32{
+            border: 3px solid green;
+        }
+        .box33{
+            border: 3px solid yellow;
+        }
+        .box34{
+            border: 3px solid green;
+        }
+        .box35{
+            border: 3px solid green;
+        }
+        .box36{
+            border: 3px solid green;
+        }
+         .box3{
+            visibility: hidden;
+         }
+         .box4{
+            visibility: hidden;
+         }
+         .box5{
+            visibility: hidden;
+         }
+         .box6{
+            visibility: hidden;
+         }
+         .box28{
+            visibility: hidden;
+         }
+         .li{
+            color: yellow;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            /* border: px;
+            border-color: yellow; */
+         }
+         .lip{
+            color: yellow;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .fb{
+            color: yellow;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .fbp{
+            color: yellow;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .db{
+            color: blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .dbp{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .ct{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .ctp{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .si{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .sip{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .wk{
+            color: orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .wkp{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .sp{
+            color: orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .spp{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .tw{
+            color: yellow;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .twp{
+            color: yellow;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .tc{
+            color: yellow;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .tcp{
+            color: yellow;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .gt{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .gtp{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .yn{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .ynp{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .ii{
+            color:blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .iip{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .te{
+            color: blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .tep{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .wu{
+            color: blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .wup{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .cv{
+            color: orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .cvp{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .dg{
+            color: orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .dgp{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .tg{
+            color: orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .tgp{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .gg{
+            color:blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .ggp{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .ex{
+            color: blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .exp{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .so{
+            color:green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .sop{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .cd{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .cdp{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .cp{
+            color: blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .cpp{
+            color:blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+        
+        
+         .tr{
+            color: blue;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .trp{
+            color: blue;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .in{
+            color: yellow;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .inp{
+            color: yellow;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .mu{
+            color:orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .mup{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .me{
+            color:orange;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .mep{
+            color: orange;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .no{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .nop{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .re{
+            color: yellow;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .rep{
+            color: yellow;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .rd{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .rdp{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .st{
+            color:green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .stp{
+            color: green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         .ad{
+            color: green;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+         }
+         .adp{
+            color:green;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+         }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box box1">
+                <h1 class="li">Li</h1>
+                <p class="lip">LinkedIn</p>
+            </div>
+            <div class="box box2">
+                <h1 class="fb">Fb</h1>
+                <p class="fbp">Facebook</p>
+            </div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7">
+                <h1 class="db">Db</h1>
+                <p class="dbp">Dribble</p>
+            </div>
+            <div class="box box8">
+                <h1 class="ct">Ct</h1>
+                <p class="ctp">Commits</p>
+            </div>
+            <div class="box box9">
+                <h1 class="si">Si</h1>
+                <p class="sip">Slack</p>
+            </div>
+            <div class="box box10">
+                <h1 class="wk">Wk</h1>
+                <p class="wkp">Wikipedia</p>
+            </div>
+            <div class="box box11">
+                <h1 class="sp">Sp</h1>
+                <p class="spp">Spotify</p>
+            </div>
+            <div class="box box12">
+                <h1 class="tw">Tw</h1>
+                <p class="twp">Twitter</p>
+            </div>
+            <div class="box box13">
+                <h1 class="tc">Tc</h1>
+                <p class="tcp">Twitch</p>
+            </div>
+            <div class="box box14">
+                <h1 class="gt">Gt</h1>
+                <p class="gtp">GitHub</p>
+            </div>
+            <div class="box box15">
+                <h1 class="yn">Yn</h1>
+                <p class="ynp">yarn</p>
+            </div>
+            <div class="box box16">
+                <h1 class="ii">Ii</h1>
+                <p class="iip">Illustration</p>
+            </div>
+            <div class="box box17">
+                <h1 class="te">Te</h1>
+                <p class="tep">TellyState</p>
+            </div>
+            <div class="box box18">
+                <h1 class="wu">Wu</h1>
+                <p class="wup">Wunderfst</p>
+            </div>
+            <div class="box box19">
+                <h1 class="cv">Cv</h1>
+                <p class="cvp">Cooking</p>
+            </div>
+            <div class="box box20">
+                <h1 class="dg">Dg</h1>
+                <p class="dgp">DogGifts</p>
+            </div>
+            <div class="box box21">
+                <h1 class="tg">Tg</h1>
+                <p class="tgp">TogglBlog</p>
+            </div>
+            <div class="box box22">
+                <h1 class="gg">Gg</h1>
+                <p class="ggp">Google</p>
+            </div>
+            <div class="box box23">
+                <h1 class="ex">Ex</h1>
+                <p class="exp">Excel</p>
+            </div>
+            <div class="box box24">
+                <h1 class="so">So</h1>
+                <p class="sop">StockOn</p>
+            </div>
+            <div class="box box25">
+                <h1 class="cd">Cd</h1>
+                <p class="cdp">Coding</p>
+            </div>
+            <div class="box box26">
+                <h1 class="cp">Cp</h1>
+                <p class="cpp">Codepen</p>
+            </div>
+            <div class="box box27">
+                <h1 class="tr">Tr</h1>
+                <p class="trp">Travel</p>
+            </div>
+            <div class="box box28">
+                <!-- <h1 class="x">X</h1> -->
+            </div>
+            <div class="box box29">
+                <h1 class="in">In</h1>
+                <p class="inp">Instagram</p>
+            </div>
+            <div class="box box30">
+                <h1 class="mu">Mu</h1>
+                <p class="mup">Musicals</p>
+            </div>
+            <div class="box box31">
+                <h1 class="me">Me</h1>
+                <p class="mep">Memes</p>
+            </div>
+            <div class="box box32">
+                <h1 class="no">No</h1>
+                <p class="nop">Notions</p>
+            </div>
+            <div class="box box33">
+                <h1 class="re">Re</h1>
+                <p class="rep">Reddit</p>
+            </div>
+            <div class="box box34">
+                <h1 class="rd">Rd</h1>
+                <p class="rdp">Research</p>
+            </div>
+            <div class="box box35">
+                <h1 class="st">St</h1>
+                <p class="stp">Stats</p>
+            </div>
+            <div class="box box36">
+                <h1 class="ad">Ad</h1>
+                <p class="adp">Ads</p>
+            </div>
+            
+           
+            
+        </div>
+    </div>
+</body>
+</html>
